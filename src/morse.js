@@ -1,6 +1,13 @@
+  /**
+  * Here we find a class that will convert from and into morse code
+  * @class Morse code package
+  */
   var Morse = function(){
   };
 
+  /**
+  * Morse table
+  */
   Morse.morseTable={
     "a": "01","b":"1000","c":"1010",
     "d":"100","e":"0","f":"0010",
@@ -13,7 +20,13 @@
     "y":"1011","z":"1100"," ":" "
   };
 
-  Morse.prototype.toBraille=function(message){
+/**
+ * toMorse - This will convert a string into a sequence of * and - morse codes
+ *
+ * @param  {String} message This is a string containing the message we want convert into morse code
+ * @return {String}      Sequence of dot and dash symbols representing the message in morse code
+ */
+  Morse.prototype.toMorse=function(message){
     return message.split("").map(function(char){
       if(char==" ") return "_";
       return Morse.morseTable[char].split("").map(function(l){
@@ -22,7 +35,14 @@
     }).join(" ");
   };
 
-  Morse.prototype.fromBraille=function(message){
+  /**
+   * fromMorse - This will convert a morse code into a string
+   *
+   * @param  {String} message This is a sequence of dash and dots we want convert into string
+   * @return {String}      String with the message code
+   */
+
+  Morse.prototype.fromMorse=function(message){
     return message.split("_").map(function(word){
       return word.split(" ").map(function(letter){
         var code = letter.split("").map(function(signal){
