@@ -1,0 +1,22 @@
+{
+  "name": "codesinjs",
+  "version": "1.0.0",
+  "description": "Tinkering with codes",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "Codes",
+    "information",
+    "braille",
+    "morse",
+    "UPC"
+  ],
+  "author": "Balhau",
+  "license": "MIT",
+  "dependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
+  }
+}
