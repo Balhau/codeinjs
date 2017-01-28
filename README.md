@@ -19,3 +19,9 @@ After the installation you can run the tests by typing
 The code is also documented in a standard way so you can generate the respective html by installing the [jsdoc](https://www.npmjs.com/package/jsdoc) node package
 
       npm install jsdoc
+
+After the installation you can create documentation for the classes you want by typing
+
+      jsdoc src/morse.js -d documentation
+
+this will generate the documentation in html format under the folder named *documentation*
